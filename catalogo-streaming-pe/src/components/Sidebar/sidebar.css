@@ -1,0 +1,235 @@
+/* SIDEBAR DARK GLASS */
+
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s ease;
+  z-index: 90;
+}
+
+.sidebar-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 350px;
+  height: 100vh;
+  padding: 28px;
+  z-index: 100;
+  overflow-y: auto;
+  transform: translateX(-100%);
+  transition: 0.35s ease;
+
+  background: linear-gradient(
+    145deg,
+    rgba(10, 18, 30, 0.92),
+    rgba(8, 28, 24, 0.82)
+  );
+
+  border-right: 1px solid rgba(16, 185, 129, 0.16);
+  backdrop-filter: blur(26px);
+  -webkit-backdrop-filter: blur(26px);
+  box-shadow: 24px 0 70px rgba(0, 0, 0, 0.45);
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sidebar-top h2 {
+  font-size: 34px;
+  letter-spacing: -1px;
+  color: white;
+}
+
+.close-sidebar {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  color: white;
+  background: rgba(255, 255, 255, 0.08);
+  display: grid;
+  place-items: center;
+  transition: 0.25s ease;
+}
+
+.close-sidebar:hover {
+  background: rgba(16, 185, 129, 0.22);
+  box-shadow: 0 0 24px rgba(16, 185, 129, 0.22);
+}
+
+.sidebar-search,
+.sidebar-links button,
+.sidebar-categories button {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  transition: 0.25s ease;
+}
+
+.sidebar-search {
+  margin-top: 34px;
+  height: 58px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 18px;
+}
+
+.sidebar-search input {
+  border: none;
+  background: transparent;
+  outline: none;
+  width: 100%;
+  font-size: 15px;
+  color: white;
+}
+
+.sidebar-search input::placeholder {
+  color: rgba(255, 255, 255, 0.48);
+}
+
+.sidebar-links {
+  margin-top: 34px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.sidebar-links button {
+  height: 58px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 0 18px;
+  font-size: 16px;
+  font-weight: 800;
+}
+
+.sidebar-links button:hover,
+.sidebar-categories button:hover {
+  transform: translateY(-3px);
+  background: rgba(16, 185, 129, 0.16);
+  border-color: rgba(16, 185, 129, 0.36);
+  color: #d1fae5;
+  box-shadow:
+    0 0 24px rgba(16, 185, 129, 0.18),
+    0 16px 34px rgba(0, 0, 0, 0.25);
+}
+
+.sidebar-section {
+  margin-top: 40px;
+}
+
+.sidebar-title {
+  font-size: 13px;
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.52);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.sidebar-categories {
+  margin-top: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sidebar-categories button {
+  min-height: 68px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px 18px;
+  font-size: 15px;
+  font-weight: 800;
+}
+
+.cat-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.cat-info strong {
+  font-size: 15px;
+  color: white;
+}
+
+.cat-info small {
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.56);
+  line-height: 1.35;
+}
+
+.sidebar-categories button:hover .cat-info small {
+  color: rgba(209, 250, 229, 0.78);
+}
+
+.sidebar-promo {
+  margin-top: 42px;
+  padding: 28px;
+  border-radius: 28px;
+  color: white;
+
+  background: linear-gradient(
+    145deg,
+    rgba(6, 78, 59, 0.72),
+    rgba(15, 23, 42, 0.82)
+  );
+
+  border: 1px solid rgba(16, 185, 129, 0.22);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+}
+
+.sidebar-promo span {
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  color: #6ee7b7;
+}
+
+.sidebar-promo h3 {
+  margin-top: 12px;
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.sidebar-promo p {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.5;
+}
+
+.sidebar-promo button {
+  margin-top: 20px;
+  width: 100%;
+  height: 52px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #10b981, #047857);
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 14px 30px rgba(16, 185, 129, 0.24);
+}

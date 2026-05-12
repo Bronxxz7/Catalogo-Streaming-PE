@@ -1,0 +1,243 @@
+/* NAVBAR DARK GLASS */
+
+.navbar {
+  width: 100%;
+  height: 74px;
+
+  padding: 0 24px;
+
+  border-radius: 30px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(15,23,42,0.78),
+      rgba(15,23,42,0.52)
+    );
+
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  box-shadow:
+    0 18px 45px rgba(0,0,0,0.34);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  position: sticky;
+  top: 18px;
+
+  z-index: 50;
+
+  transition: 0.3s ease;
+}
+
+.navbar:hover {
+  border-color: rgba(16,185,129,0.18);
+
+  box-shadow:
+    0 20px 55px rgba(0,0,0,0.38),
+    0 0 24px rgba(16,185,129,0.08);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.brand-icon {
+  width: 48px;
+  height: 48px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #10b981,
+      #047857
+    );
+
+  color: white;
+
+  display: grid;
+  place-items: center;
+
+  box-shadow:
+    0 12px 28px rgba(16,185,129,0.28);
+
+  transition: 0.25s ease;
+}
+
+.brand-icon:hover {
+  transform: scale(1.06);
+
+  box-shadow:
+    0 0 26px rgba(16,185,129,0.34);
+}
+
+.brand-icon svg {
+  stroke: white;
+}
+
+.secret-logo {
+  border: none;
+}
+
+.brand h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: white;
+  letter-spacing: -0.5px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.cart-btn,
+.menu-btn {
+  width: 52px;
+  height: 52px;
+
+  border-radius: 18px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.04)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  position: relative;
+
+  transition: 0.25s ease;
+}
+
+.cart-btn:hover,
+.menu-btn:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(16,185,129,0.24),
+      rgba(4,120,87,0.16)
+    );
+
+  border-color:
+    rgba(16,185,129,0.26);
+
+  box-shadow:
+    0 0 22px rgba(16,185,129,0.14);
+}
+
+.cart-btn svg,
+.menu-btn svg {
+  width: 26px;
+  height: 26px;
+
+  stroke: white;
+}
+
+.cart-btn span {
+  position: absolute;
+
+  top: -8px;
+  right: -8px;
+
+  width: 24px;
+  height: 24px;
+
+  border-radius: 50%;
+
+  background: #ef4444;
+  color: white;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 12px;
+  font-weight: 900;
+
+  box-shadow:
+    0 0 18px rgba(239,68,68,0.62);
+}
+
+.login-btn {
+  height: 50px;
+
+  padding: 0 22px;
+
+  border-radius: 22px;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.08),
+      rgba(255,255,255,0.04)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 800;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  transition: 0.25s ease;
+}
+
+.login-btn:hover {
+  transform: translateY(-2px);
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(16,185,129,0.22),
+      rgba(4,120,87,0.16)
+    );
+
+  border-color:
+    rgba(16,185,129,0.26);
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    height: auto;
+    padding: 16px;
+    border-radius: 24px;
+  }
+
+  .brand h2 {
+    font-size: 20px;
+  }
+
+  .login-btn {
+    display: none;
+  }
+}
